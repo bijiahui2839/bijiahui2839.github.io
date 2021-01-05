@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>余辉的博客</title>
+  <title>Archives: 2021/1 | 余辉的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="余辉的博客">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/archives/2021/01/index.html">
 <meta property="og:site_name" content="余辉的博客">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="余辉">
@@ -142,274 +142,47 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-冒泡排序的讲解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/01/05/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%9A%84%E8%AE%B2%E8%A7%A3/">冒泡排序的讲解</a>
-    </h1>
-  
-
-        
-        <a href="/2021/01/05/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%9A%84%E8%AE%B2%E8%A7%A3/" class="archive-article-date">
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2021" class="archive-year">2021</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2021/01/05/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%9A%84%E8%AE%B2%E8%A7%A3/" class="archive-article-date">
   	<time datetime="2021-01-05T03:13:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-05</time>
 </a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>#c语言冒泡算法讲解</p>
-<hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;冒泡排序</span><br><span class="line">void sort(int* a, int len)</span><br><span class="line">&#123;</span><br><span class="line">    int i, j, t;</span><br><span class="line"></span><br><span class="line">    for (i &#x3D; 0; i &lt; len-1; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        for (j &#x3D; 0 j &lt; len-1-i; ++j)</span><br><span class="line">        &#123;</span><br><span class="line">            if (a[j] &gt; a[j+1])</span><br><span class="line">            &#123;</span><br><span class="line">                t &#x3D; a[j];</span><br><span class="line">                a[j] &#x3D; a[j+1];</span><br><span class="line">                a[j+1] &#x3D; t;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">int main(void)</span><br><span class="line">&#123;</span><br><span class="line">    int a[6] &#x3D; &#123;2,12,10, 8, 0, 3&#125;;</span><br><span class="line">    int i &#x3D; 0;</span><br><span class="line"></span><br><span class="line">    sort(a, 6);</span><br><span class="line"></span><br><span class="line">    for (i &#x3D; 0; i &lt; 6; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        printf(&quot;%d&quot;, a[i]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>本程序的结果为0 2 3 8 10 12；</p>
-</blockquote>
-<p>本程序的sort函数第一次的for循环是为了判断要循环多少次 len-1 的意思是只需要循环5次<br>本程序中len=5；<br>二第二个for循环的意思是把len个数相互比较大小在第二个for循环第一次终止的时候最后一个数为最大值 所以没有必要在去比较最后一个然后程序继续循环第一个for循环和第一次不同的是这次循环i = 1；然后在循环第二个for循环应为i = 1；所以 len-1-i = 4 其结果就为最后一个数字不需要做比较；</p>
-<p>程序中，为什么每轮比较的次数是 j&lt;len–1–i，而不是 j&lt;len–1？</p>
-<p>因为冒泡排序有一个特点，这个程序是从大到小排序，所以第一轮排序以后，最小的数就会浮到最右面；第二轮排序以后，第二小的数会浮到倒数第二个位置；第三轮排序以后，第三小的数会浮到倒数第三个位置……也就是说，排序多少轮，就有多少个数字已经按排序要求排好了，它们不需要再比较。</p>
-<p><img src="https://b-ssl.duitang.com/uploads/item/201610/12/20161012220335_fsFSj.jpeg" alt="123"><br><img src="https://tse1-mm.cn.bing.net/th/id/OIP.UAIHpJOQJjIoHuuFkNBdcQHaEo?pid=Api&rs=1" alt="213"><br><img src="https://tse1-mm.cn.bing.net/th/id/OIP.lxtOpV-3OXj4yTHx9W5tSAHaNK?pid=Api&rs=1"><br><img src="https://5b0988e595225.cdn.sohucs.com/images/20190816/aeaf7c51f8ed48618b4198afd243a22b.jpeg" alt="123123"><br><img src="https://wxt.sinaimg.cn/large/0065dZYdly1g5bvc5ttnoj30zy1az7wh.jpg" alt="2123"></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/01/05/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%9A%84%E8%AE%B2%E8%A7%A3/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-c语言的语法讲解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/29/c%E8%AF%AD%E8%A8%80%E7%9A%84%E8%AF%AD%E6%B3%95%E8%AE%B2%E8%A7%A3/">c语言的语法讲解</a>
+      <a class="archive-article-title" href="/2021/01/05/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%9A%84%E8%AE%B2%E8%A7%A3/">冒泡排序的讲解</a>
     </h1>
   
 
-        
-        <a href="/2020/11/29/c%E8%AF%AD%E8%A8%80%E7%9A%84%E8%AF%AD%E6%B3%95%E8%AE%B2%E8%A7%A3/" class="archive-article-date">
-  	<time datetime="2020-11-29T02:31:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="c语言-三目运算符"><a href="#c语言-三目运算符" class="headerlink" title="c语言 三目运算符"></a>c语言 三目运算符</h1>
-        
-          <a class="article-more-a" href="/2020/11/29/c%E8%AF%AD%E8%A8%80%E7%9A%84%E8%AF%AD%E6%B3%95%E8%AE%B2%E8%A7%A3/#more">more >></a>
-        
-      
+        <div class="article-info info-on-right">
+          
+          
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/11/29/c%E8%AF%AD%E8%A8%80%E7%9A%84%E8%AF%AD%E6%B3%95%E8%AE%B2%E8%A7%A3/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
-    <article id="post-计算机基础讲解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E8%AE%B2%E8%A7%A3/">计算机基础讲解</a>
-    </h1>
-  
-
-        
-        <a href="/2020/10/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E8%AE%B2%E8%A7%A3/" class="archive-article-date">
-  	<time datetime="2020-10-21T10:17:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="计算机的基础知识讲解"><a href="#计算机的基础知识讲解" class="headerlink" title="计算机的基础知识讲解"></a>计算机的基础知识讲解</h1><h2 id="进制的转换问题"><a href="#进制的转换问题" class="headerlink" title="进制的转换问题"></a>进制的转换问题</h2><hr>
-        
-          <a class="article-more-a" href="/2020/10/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E8%AE%B2%E8%A7%A3/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/10/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E8%AE%B2%E8%A7%A3/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-我的第一篇博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/13/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">我的第一篇博客</a>
-    </h1>
-  
-
-        
-        <a href="/2020/10/13/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2020-10-13T00:30:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="我的博客文章编写"><a href="#我的博客文章编写" class="headerlink" title="我的博客文章编写"></a>我的博客文章编写</h1><hr>
-        
-          <a class="article-more-a" href="/2020/10/13/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/10/13/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
 
 
           </div>
@@ -431,9 +204,9 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
-		isArchive: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
