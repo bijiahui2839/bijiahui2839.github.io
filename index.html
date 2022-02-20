@@ -142,6 +142,69 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-集合" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/02/20/%E9%9B%86%E5%90%88/">集合</a>
+    </h1>
+  
+
+        
+        <a href="/2022/02/20/%E9%9B%86%E5%90%88/" class="archive-article-date">
+  	<time datetime="2022-02-20T07:33:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://m.qpic.cn/psc?/V14UJyUn200tb3/45NBuzDIW489QBoVep5mcYd8fAW.GqUVhQWFCtcqUZ3l1J8IHyCZemvbwzgUF8dOrE00R7qXUx1WClQlpENw1DiNNHXeoEXeavszx4Ehj9g!/b&bo=WwNfAlsDXwIDKQw!&rf=viewer_4" alt="jihe"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@SuppressWarnings(&#123;&quot;all&quot;&#125;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Homework02</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        ArrayList arrayList = <span class="keyword">new</span> ArrayList();</span><br><span class="line">        Car car = <span class="keyword">new</span> Car(<span class="string">&quot;宝马&quot;</span>, <span class="number">400000</span>);</span><br><span class="line">        Car car2 = <span class="keyword">new</span> Car(<span class="string">&quot;宾利&quot;</span>, <span class="number">5000000</span>);</span><br><span class="line">        arrayList.add(car);</span><br><span class="line">        arrayList.add(car2);</span><br><span class="line">        System.out.println(arrayList);</span><br><span class="line">        arrayList.remove(car);</span><br><span class="line">        <span class="comment">//arrayList.remove(0); 删除指定元素可以传入下标</span></span><br><span class="line">        System.out.println(arrayList);</span><br><span class="line">        System.out.println(arrayList.contains(car));<span class="comment">//查找元素是否存在</span></span><br><span class="line">        System.out.println(arrayList.size());<span class="comment">//获得元素个数</span></span><br><span class="line">        System.out.println(arrayList.isEmpty());<span class="comment">//判断 是否为空</span></span><br><span class="line">        <span class="comment">//arrayList.clear();</span></span><br><span class="line">        System.out.println(arrayList);</span><br><span class="line">        arrayList.addAll(arrayList);<span class="comment">//添加多个元素</span></span><br><span class="line">     </span><br><span class="line">        arrayList.containsAll(arrayList);<span class="comment">//查找多个元素是否都存在</span></span><br><span class="line">        arrayList.removeAll(arrayList);  <span class="comment">//删除多个元素</span></span><br><span class="line">        <span class="comment">//使用增强for和迭代器来遍历所有的car</span></span><br><span class="line">        <span class="keyword">for</span> (Object o :arrayList) &#123;</span><br><span class="line">            System.out.println(o);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        Iterator iterator = arrayList.iterator();</span><br><span class="line">        <span class="keyword">while</span> (iterator.hasNext()) &#123;</span><br><span class="line">            Object next =  iterator.next();</span><br><span class="line">            System.out.println(next);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Car</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> price;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Car</span><span class="params">(String name, <span class="keyword">double</span> price)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.price = price;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getPrice</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> price;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setPrice</span><span class="params">(<span class="keyword">double</span> price)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.price = price;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Car&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;name=&#x27;&quot;</span> + name + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&quot;, price=&quot;</span> + price +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/02/20/%E9%9B%86%E5%90%88/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Integer类的-装箱与拆箱" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -699,71 +762,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2021/01/05/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%9A%84%E8%AE%B2%E8%A7%A3/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-c语言的语法讲解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/29/c%E8%AF%AD%E8%A8%80%E7%9A%84%E8%AF%AD%E6%B3%95%E8%AE%B2%E8%A7%A3/">c语言的语法讲解</a>
-    </h1>
-  
-
-        
-        <a href="/2020/11/29/c%E8%AF%AD%E8%A8%80%E7%9A%84%E8%AF%AD%E6%B3%95%E8%AE%B2%E8%A7%A3/" class="archive-article-date">
-  	<time datetime="2020-11-29T02:31:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="c语言-三目运算符"><a href="#c语言-三目运算符" class="headerlink" title="c语言 三目运算符"></a>c语言 三目运算符</h1>
-        
-          <a class="article-more-a" href="/2020/11/29/c%E8%AF%AD%E8%A8%80%E7%9A%84%E8%AF%AD%E6%B3%95%E8%AE%B2%E8%A7%A3/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/11/29/c%E8%AF%AD%E8%A8%80%E7%9A%84%E8%AF%AD%E6%B3%95%E8%AE%B2%E8%A7%A3/">展开全文 >></a>
         </p>
       
 
